@@ -68,7 +68,7 @@ function startGame() {
 	
 	setTimeout(() => {
 		displayQuestions();
-	},1500);
+	},3500);
 	
 	// Start background music
 	introSound.play();
@@ -384,7 +384,9 @@ function restartGame() {
 	playerTowScoreDisplay.innerHTML = playerTowScore;
 	count = 0;
 	clearInterval(TIMER);
-	displayQuestions();
+	setTimeout(() => {
+		displayQuestions();
+	},3500);
 	introSound.play();
 	introSound.loop = true;
 	playerOne = true;
