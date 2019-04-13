@@ -66,7 +66,7 @@ function startGame() {
 	// player one has now answer
 	playerOne = true;
 	
-	setTimeOut(() => {
+	setTimeout(() => {
 		displayQuestions();
 	},1500);
 	
