@@ -65,7 +65,11 @@ function startGame() {
 	gameScreen.classList.add('lightSpeedIn');
 	// player one has now answer
 	playerOne = true;
-	displayQuestions();
+	
+	setTimeOut(() => {
+		displayQuestions();
+	},1500);
+	
 	// Start background music
 	introSound.play();
 	introSound.volume = 0.1;
@@ -178,7 +182,7 @@ function asnwerCorrect(player) {
 				answerTextB.classList.remove('bounceOut');
 				answerTextC.classList.remove('bounceOut');
 				answerTextD.classList.remove('bounceOut');
-			}, 1000);
+			}, 2000);
 			break;
 		case 'playerTow':
 			playerOneNowPlay.classList.add('player_board_active','lightSpeedIn');
@@ -209,7 +213,7 @@ function asnwerCorrect(player) {
 				answerTextB.classList.remove('bounceOut');
 				answerTextC.classList.remove('bounceOut');
 				answerTextD.classList.remove('bounceOut');
-			}, 1000);
+			}, 2000);
 			break;
 	}
 }
